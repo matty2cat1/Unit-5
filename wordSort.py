@@ -1,6 +1,6 @@
 #Matt Westelman
 #4/14/18
-#listDemo.py - Lists. How hard could this be?
+#wordSort.py - Sorting words. Pretty simple
 
 words = input("Enter some words: ").split(" ")
 words.sort()
