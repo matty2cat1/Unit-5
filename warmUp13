@@ -1,0 +1,16 @@
+#Matt Westelman
+#4/25/18
+#warmUp13.py - more list practice
+
+from random import randint
+i=0
+rand = []
+while i<=19:
+    rand.append(randint(1,100))
+    i=i+1
+    
+
+rand.sort()
+print(sum(rand))
+print(rand[0])
+print(rand[19])
