@@ -1,0 +1,9 @@
+#Matt Westelman
+#4/26/18
+#vowelWordDemo - Treat strings as lists
+
+words = input('Enter some words ' ).split(' ')
+
+for i in words:
+    if i[0] in 'AEIOUaeiou': #Starts with vowel
+        print(i)
