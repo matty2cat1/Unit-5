@@ -5,7 +5,8 @@
 from random import randint
 from time import time
 
-N = 10 #how many numbers will be sorted
+N = 100 #how many numbers will be sorted
+
 
 def mySort(A):
     swapped = True
@@ -23,7 +24,8 @@ def mySort(A):
                 A[i], A[i+1] = A[i+1], A[i]
                 swapped = True
     return A
-    
+
+
 if __name__ == '__main__':
 
     #make a list of N random numbers between 1 and N
