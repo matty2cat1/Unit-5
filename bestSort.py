@@ -1,29 +1,24 @@
 #Matt Westelman
-#5/2/18
+#5/3/18
 #cocktailSort.py - implementing coctail sort
 
-from random import randint
+from random import *
 from time import time
 
-N = 10 #how many numbers will be sorted
+N = 3 #how many numbers will be sorted
 
-def mySort(A):
-    swapped = True
-    while swapped:
-        swapped = False
-        for i in range(0, len(A)-1):
-            if A[i] > A[i+1]:
-                A[i], A[i+1] = A[i+1], A[i]
-                swapped = True
-        if not swapped:
-            break
-        swapped = False
-        for i in range(len(A)-2,-1,-1):
-            if A[i] > A[i+1]:
-                A[i], A[i+1] = A[i+1], A[i]
-                swapped = True
+def inOrder(A):
+    if A == sorted(A):
+        return True
+    else:
+        return False
+
+def bestSort(A):
+    while not inOrder(A):
+        random.shuffle(A)
     return A
-    
+
+
 if __name__ == '__main__':
 
     #make a list of N random numbers between 1 and N
@@ -35,7 +30,7 @@ if __name__ == '__main__':
     
     #time how long your sort takes
     t1 = time()
-    numbers = mySort(numbers)
+    numbers = bestSort(numbers)
     t2 = time()
     
     #print whether the sort worked or not
