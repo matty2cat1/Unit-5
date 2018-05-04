@@ -1,21 +1,23 @@
 #Matt Westelman
 #5/3/18
-#cocktailSort.py - implementing coctail sort
+#insertionSort.py - hey, at least it isn't bogo sort. Anymore.
 
-from random import *
+from random import randint
 from time import time
 
-N = 3 #how many numbers will be sorted
+N = 100 #how many numbers will be sorted
 
-def inOrder(A):
-    if A == sorted(A):
-        return True
-    else:
-        return False
 
 def bestSort(A):
-    while not inOrder(A):
-        random.shuffle(A)
+    i=1
+    while i<len(A):
+        x=A[i]
+        j=i-1
+        while j>= 0 and A[j]>x:
+            A[j+1] = A[j]
+            j=j-1
+        A[j+1] = x
+        i=i+1
     return A
 
 
