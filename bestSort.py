@@ -1,6 +1,6 @@
 #Matt Westelman
 #5/3/18
-#cocktailSort.py - implementing coctail sort
+#bestSort.py - The only sort we need
 
 from random import randint,shuffle
 from time import time
