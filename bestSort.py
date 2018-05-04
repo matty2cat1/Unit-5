@@ -2,10 +2,10 @@
 #5/3/18
 #cocktailSort.py - implementing coctail sort
 
-from random import *
+from random import randint,shuffle
 from time import time
 
-N = 3 #how many numbers will be sorted
+N = 8 #how many numbers will be sorted
 
 def inOrder(A):
     if A == sorted(A):
@@ -15,7 +15,7 @@ def inOrder(A):
 
 def bestSort(A):
     while not inOrder(A):
-        random.shuffle(A)
+        shuffle(A)
     return A
 
 
